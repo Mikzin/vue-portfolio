@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <the-header></the-header>
+  <img src="./images/hand-main.svg" alt="hand" class="hand-main" />
+  <div class="main">
+    <the-welcome></the-welcome>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from './components/layout/TheHeader.vue';
+import TheWelcome from './components/main/TheWelcome.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  components: { TheHeader, TheWelcome },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  color: #211b12;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+}
+
+.main {
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hand-main {
+  position: absolute;
+  z-index: -1;
 }
 </style>
