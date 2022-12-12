@@ -50,19 +50,6 @@
   </div>
 </template>
 
-<script>
-import BaseButton from '../UI/BaseButton.vue';
-
-export default {
-  components: { BaseButton },
-  data() {
-    return {
-      image: '../../images/cv.svg',
-    };
-  },
-};
-</script>
-
 <style scoped>
 .welcome {
   max-width: 510px;
@@ -101,6 +88,10 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.welcome-social-link:hover {
+  opacity: 0.8;
 }
 
 .cv-link {
