@@ -1,46 +1,29 @@
 <template>
   <div class="card">
-    <img :src="project.image" class="card__image" />
-    <h3 class="card__title">{{ project.title }}</h3>
+    <img :src="image" class="card__image" />
+    <h3 class="card__title">{{ title }}</h3>
     <div class="card__badges">
-      <base-badge v-for="badge in project.badges" :key="badge">{{
-        badge
-      }}</base-badge>
+      <base-badge v-for="badge in badges" :key="badge">{{ badge }}</base-badge>
     </div>
     <p class="card__description">
-      {{ project.description }}
+      {{ description }}
     </p>
     <div class="card__buttons">
       <base-button class="card__button">
         <img src="../../images/code.svg" class="button-image" />
-        <a :href="project.codeLink" target="blank">Код</a>
+        <a :href="codeLink" target="blank">Код</a>
       </base-button>
       <base-button class="card__button">
         <img src="../../images/demo.svg" class="button-image" />
-        <a :href="project.demoLink" target="blank">Демо</a>
+        <a :href="demoLink" target="blank">Демо</a>
       </base-button>
     </div>
   </div>
 </template>
 
 <script>
-import Omnifood from '../../images/omnifood.png';
-
 export default {
-  props: ['title', 'description', 'badge'],
-  data() {
-    return {
-      // badges: ['HTML', 'CSS', 'VUE'],
-      project: {
-        title: 'Omnifood',
-        description: 'Omnifood это проект о доставке здоровой еды',
-        badges: ['HTML', 'CSS', 'JavaScript'],
-        image: Omnifood,
-        codeLink: 'https://github.com/Mikzin/omnifood',
-        demoLink: 'https://mikzin.github.io/omnifood/',
-      },
-    };
-  },
+  props: ['title', 'description', 'badges', 'image', 'codeLink', 'demoLink'],
 };
 </script>
 
@@ -84,5 +67,12 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+}
+
+.card__image {
+  max-width: 399px;
+  height: 299px;
+  background-size: cover;
+  background-position: center;
 }
 </style>

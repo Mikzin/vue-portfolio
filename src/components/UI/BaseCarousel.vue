@@ -1,69 +1,51 @@
 <template>
-  <the-header></the-header>
-  <img src="./images/hand-main.svg" alt="hand" class="hand-main" />
-  <div class="main">
-    <the-welcome></the-welcome>
-    <base-container id="portfolio">
-      <h2 class="projects__title">Последние проекты</h2>
-      <base-container class="card__container">
-        <base-card
-          v-for="project in projects"
-          :key="project.title"
-          :title="project.title"
-          :description="project.description"
-          :badges="project.badges"
-          :image="project.image"
-          :codeLink="project.codeLink"
-          :demoLink="project.demoLink"
-        ></base-card>
-      </base-container>
-    </base-container>
-    <base-container>
-      <base-carousel> </base-carousel>
-    </base-container>
-    <base-container>
-      <the-about></the-about>
-    </base-container>
-    <base-container>
-      <the-skills></the-skills>
-    </base-container>
-    <base-container>
-      <the-footer></the-footer>
-    </base-container>
-  </div>
+  <Carousel :itemsToShow="4" :wrapAround="true" :transition="300">
+    <!-- <div class="carousel__item">{{ slide }}</div> -->
+    <base-card
+      v-for="project in projects"
+      :key="project.title"
+      :title="project.title"
+      :description="project.description"
+      :badges="project.badges"
+      :image="project.image"
+      :codeLink="project.codeLink"
+      :demoLink="project.demoLink"
+    ></base-card>
+
+    <template #addons>
+      <Pagination />
+      <Navigation />
+    </template>
+  </Carousel>
 </template>
 
 <script>
-import BaseContainer from './components/UI/BaseContainer.vue';
-import BaseCard from './components/UI/BaseCard.vue';
-import TheHeader from './components/layout/TheHeader.vue';
-import TheWelcome from './components/main/TheWelcome.vue';
-import BaseCarousel from './components/UI/BaseCarousel.vue';
-import TheAbout from './components/main/TheAbout.vue';
-import TheSkills from './components/main/TheSkills.vue';
-import TheFooter from './components/layout/TheFooter.vue';
+import { defineComponent } from 'vue';
+import { Carousel, Pagination, Navigation } from 'vue3-carousel';
 
-import Omnifood from '../src/images/omnifood.png';
-import Mesto from '../src/images/mesto.png';
-import Todo from '../src/images/todo.png';
-import Monster from '../src/images/monster.png';
-import FriendContact from '../src/images/FriendContact.png';
-import Modesto from '../src/images/modesto.png';
-import HowTo from '../src/images/how-to-study.png';
-import Organic from '../src/images/organick.png';
-import RememberMe from '../src/images/Learningresources.png';
-import Vueshop from '../src/images/Vueshop.png';
+import 'vue3-carousel/dist/carousel.css';
 
-export default {
+import BaseCard from './BaseCard.vue';
+import Omnifood from '../../images/omnifood.png';
+import Mesto from '../../images/mesto.png';
+import Todo from '../../images/todo.png';
+import Monster from '../../images/monster.png';
+import FriendContact from '../../images/FriendContact.png';
+import Modesto from '../../images/modesto.png';
+import HowTo from '../../images/how-to-study.png';
+import Organic from '../../images/organick.png';
+import RememberMe from '../../images/Learningresources.png';
+import Vueshop from '../../images/Vueshop.png';
+
+export default defineComponent({
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: 'Autoplay',
   components: {
-    TheHeader,
-    TheWelcome,
-    BaseContainer,
+    Carousel,
+    // Slide,
+    Pagination,
+    Navigation,
     BaseCard,
-    BaseCarousel,
-    TheAbout,
-    TheSkills,
-    TheFooter,
   },
   data() {
     return {
@@ -154,51 +136,47 @@ export default {
       ],
     };
   },
-};
+});
 </script>
 
-<style>
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  color: #211b12;
-  max-width: 1280px;
-  margin: 0 auto;
+<style scoped>
+.carousel__slide {
+  padding: 5px;
 }
 
-body {
-  margin: 0;
+.carousel__viewport {
+  perspective: 2000px;
 }
 
-.main {
-  position: relative;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+.carousel__track {
+  transform-style: preserve-3d;
 }
 
-.hand-main {
-  position: absolute;
-  z-index: -1;
+.carousel__slide--sliding {
+  transition: 0.5s;
 }
 
-.projects__title {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 60px;
-  letter-spacing: -0.03em;
-  color: #bf7506;
-  margin: 100px 0 0;
+.carousel__slide {
+  opacity: 0.9;
+  transform: rotateY(-20deg) scale(0.9);
 }
 
-.card__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 72px;
+.carousel__slide--active ~ .carousel__slide {
+  transform: rotateY(20deg) scale(0.9);
+}
+
+.carousel__slide--prev {
+  opacity: 1;
+  transform: rotateY(-10deg) scale(0.95);
+}
+
+.carousel__slide--next {
+  opacity: 1;
+  transform: rotateY(10deg) scale(0.95);
+}
+
+.carousel__slide--active {
+  opacity: 1;
+  transform: rotateY(0) scale(1.1);
 }
 </style>

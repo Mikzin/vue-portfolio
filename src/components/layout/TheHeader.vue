@@ -6,10 +6,10 @@
           <a class="header__link" href="">Главная</a>
         </li>
         <li class="header__item">
-          <a class="header__link" href="">Портфолио</a>
+          <a class="header__link" href="#portfolio">Портфолио</a>
         </li>
         <li class="header__item">
-          <a class="header__link" href="">Обо мне</a>
+          <a class="header__link" href="#about">Обо мне</a>
         </li>
         <li class="header__item">
           <a class="header__link" href="">Контакты</a>

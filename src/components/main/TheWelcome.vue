@@ -38,9 +38,9 @@
         <base-button>
           <img src="../../images/cv.svg" />
           <a
-            href="../../assets/Зинчук Михаил Игоревич.pdf"
+            href="../../images/CV.pdf"
             class="cv-link"
-            download
+            download="CV-Zinchuk.pdf"
           >
             Скачать резюме</a
           >
