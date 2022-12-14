@@ -1,17 +1,24 @@
 <template>
-  <Carousel :itemsToShow="4" :wrapAround="true" :transition="300">
-    <!-- <div class="carousel__item">{{ slide }}</div> -->
-    <base-card
-      v-for="project in projects"
-      :key="project.title"
-      :title="project.title"
-      :description="project.description"
-      :badges="project.badges"
-      :image="project.image"
-      :codeLink="project.codeLink"
-      :demoLink="project.demoLink"
-    ></base-card>
-
+  <Carousel
+    :itemsToShow="1"
+    :itemsToScroll="1"
+    :wrapAround="true"
+    :transition="300"
+    :autoplay="3000"
+    :snapAlign="center"
+    :pauseAutoplayOnHover="true"
+  >
+    <Slide v-for="slide in projects" :key="slide">
+      <base-card
+        :key="slide.title"
+        :title="slide.title"
+        :description="slide.description"
+        :badges="slide.badges"
+        :image="slide.image"
+        :codeLink="slide.codeLink"
+        :demoLink="slide.demoLink"
+      ></base-card>
+    </Slide>
     <template #addons>
       <Pagination />
       <Navigation />
@@ -21,7 +28,7 @@
 
 <script>
 import { defineComponent } from 'vue';
-import { Carousel, Pagination, Navigation } from 'vue3-carousel';
+import { Carousel, Pagination, Navigation, Slide } from 'vue3-carousel';
 
 import 'vue3-carousel/dist/carousel.css';
 
@@ -36,13 +43,16 @@ import HowTo from '../../images/how-to-study.png';
 import Organic from '../../images/organick.png';
 import RememberMe from '../../images/Learningresources.png';
 import Vueshop from '../../images/Vueshop.png';
+import Findcoach from '../../images/findcoach.png';
+import Currency from '../../images/currency.png';
+import Alef from '../../images/alef.png';
 
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Autoplay',
   components: {
     Carousel,
-    // Slide,
+    Slide,
     Pagination,
     Navigation,
     BaseCard,
@@ -61,7 +71,7 @@ export default defineComponent({
         {
           title: 'Mesto',
           description:
-            'Проектная работа Mesto. Основной функционал - возможность выкладывать свои карточки с фото и подписью, ставить лайки, удалять свои карточки, просматривать карточки при нажатии. Также возможно редактирование профиля и аватара.',
+            'Проект Mesto. Можно выкладывать фото c подписью, ставить лайки, удалять и просматривать фото, редактировать профиль и аватар.',
           badges: ['HTML', 'CSS', 'JavaScript'],
           image: Mesto,
           codeLink: 'https://github.com/Mikzin/mesto',
@@ -75,6 +85,24 @@ export default defineComponent({
           image: Todo,
           codeLink: 'https://github.com/Mikzin/todo',
           demoLink: 'https://mikzin.github.io/todo',
+        },
+        {
+          title: 'Shop page',
+          description:
+            'Сайт-страница интернет магазина, сделана для практики Vue.js',
+          badges: ['HTML', 'CSS', 'JavaScipt', 'Vue'],
+          image: Alef,
+          codeLink: 'https://github.com/Mikzin/alef',
+          demoLink: 'https://mikzin.github.io/alef',
+        },
+        {
+          title: 'Курсы валют',
+          description:
+            'Сайт, где можно посмотреть курсы валют и посчитать необходимые суммы',
+          badges: ['HTML', 'CSS', 'JavaScipt', 'Vue', 'REST Api'],
+          image: Currency,
+          codeLink: 'https://github.com/Mikzin/currency-exchange',
+          demoLink: 'https://mikzin.github.io/currency-exchange',
         },
         {
           title: 'Monster slayer',
@@ -133,50 +161,23 @@ export default defineComponent({
           codeLink: 'https://github.com/Mikzin/vueshop',
           demoLink: 'https://mikzin.github.io/vueshop',
         },
+        {
+          title: 'Find Coach',
+          description:
+            'Сайт, где можно найти ментора или самому зарегистрироваться как ментор',
+          badges: ['HTML', 'CSS', 'JavaScipt', 'Vue'],
+          image: Findcoach,
+          codeLink: 'https://github.com/Mikzin/findcoach',
+          demoLink: 'https://mikzin.github.io/findcoach',
+        },
       ],
     };
   },
 });
 </script>
 
-<style scoped>
-.carousel__slide {
-  padding: 5px;
-}
-
-.carousel__viewport {
-  perspective: 2000px;
-}
-
-.carousel__track {
-  transform-style: preserve-3d;
-}
-
-.carousel__slide--sliding {
-  transition: 0.5s;
-}
-
-.carousel__slide {
-  opacity: 0.9;
-  transform: rotateY(-20deg) scale(0.9);
-}
-
-.carousel__slide--active ~ .carousel__slide {
-  transform: rotateY(20deg) scale(0.9);
-}
-
-.carousel__slide--prev {
-  opacity: 1;
-  transform: rotateY(-10deg) scale(0.95);
-}
-
-.carousel__slide--next {
-  opacity: 1;
-  transform: rotateY(10deg) scale(0.95);
-}
-
-.carousel__slide--active {
-  opacity: 1;
-  transform: rotateY(0) scale(1.1);
+<style>
+.carousel__icon {
+  fill: #bf7506;
 }
 </style>

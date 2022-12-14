@@ -4,19 +4,7 @@
   <div class="main">
     <the-welcome></the-welcome>
     <base-container id="portfolio">
-      <h2 class="projects__title">Последние проекты</h2>
-      <base-container class="card__container">
-        <base-card
-          v-for="project in projects"
-          :key="project.title"
-          :title="project.title"
-          :description="project.description"
-          :badges="project.badges"
-          :image="project.image"
-          :codeLink="project.codeLink"
-          :demoLink="project.demoLink"
-        ></base-card>
-      </base-container>
+      <h2 class="projects__title">Последние проекты:</h2>
     </base-container>
     <base-container>
       <base-carousel> </base-carousel>
@@ -35,7 +23,6 @@
 
 <script>
 import BaseContainer from './components/UI/BaseContainer.vue';
-import BaseCard from './components/UI/BaseCard.vue';
 import TheHeader from './components/layout/TheHeader.vue';
 import TheWelcome from './components/main/TheWelcome.vue';
 import BaseCarousel from './components/UI/BaseCarousel.vue';
@@ -43,116 +30,15 @@ import TheAbout from './components/main/TheAbout.vue';
 import TheSkills from './components/main/TheSkills.vue';
 import TheFooter from './components/layout/TheFooter.vue';
 
-import Omnifood from '../src/images/omnifood.png';
-import Mesto from '../src/images/mesto.png';
-import Todo from '../src/images/todo.png';
-import Monster from '../src/images/monster.png';
-import FriendContact from '../src/images/FriendContact.png';
-import Modesto from '../src/images/modesto.png';
-import HowTo from '../src/images/how-to-study.png';
-import Organic from '../src/images/organick.png';
-import RememberMe from '../src/images/Learningresources.png';
-import Vueshop from '../src/images/Vueshop.png';
-
 export default {
   components: {
     TheHeader,
     TheWelcome,
     BaseContainer,
-    BaseCard,
     BaseCarousel,
     TheAbout,
     TheSkills,
     TheFooter,
-  },
-  data() {
-    return {
-      projects: [
-        {
-          title: 'Omnifood',
-          description: 'Omnifood это проект о доставке здоровой еды',
-          badges: ['HTML', 'CSS', 'JavaScript'],
-          image: Omnifood,
-          codeLink: 'https://github.com/Mikzin/omnifood',
-          demoLink: 'https://mikzin.github.io/omnifood/',
-        },
-        {
-          title: 'Mesto',
-          description:
-            'Проектная работа Mesto. Основной функционал - возможность выкладывать свои карточки с фото и подписью, ставить лайки, удалять свои карточки, просматривать карточки при нажатии. Также возможно редактирование профиля и аватара.',
-          badges: ['HTML', 'CSS', 'JavaScript'],
-          image: Mesto,
-          codeLink: 'https://github.com/Mikzin/mesto',
-          demoLink: 'https://mikzin.github.io/mesto/',
-        },
-        {
-          title: 'Todo List',
-          description:
-            'Проектная работа для практики ООП. Основной функционал - возможность добавлять задачи, копировать и удалять их.',
-          badges: ['HTML', 'CSS', 'JavaScript'],
-          image: Todo,
-          codeLink: 'https://github.com/Mikzin/todo',
-          demoLink: 'https://mikzin.github.io/todo',
-        },
-        {
-          title: 'Monster slayer',
-          description: 'Простая игра для практики основных концепций Vue.js',
-          badges: ['HTML', 'CSS', 'JavaScript', 'Vue'],
-          image: Monster,
-          codeLink: 'https://github.com/Mikzin/monsterslayer',
-          demoLink: 'https://mikzin.github.io/monsterslayer',
-        },
-        {
-          title: 'Friend contact',
-          description:
-            'Сайт, где можно добавлять, выделять и удалять контакты друзей. Сделан для практики компонентов Vue.js',
-          badges: ['HTML', 'CSS', 'JavaScript', 'Vue'],
-          image: FriendContact,
-          codeLink: 'https://github.com/Mikzin/friendcontact',
-          demoLink: 'https://mikzin.github.io/friendcontact',
-        },
-        {
-          title: 'Modesto Flowers',
-          description: 'Сайт-визитка международной цветочной компании',
-          badges: ['HTML', 'SCSS', 'JavaScript'],
-          image: Modesto,
-          codeLink: 'https://github.com/Mikzin/modesto',
-          demoLink: 'https://mikzin.github.io/modesto',
-        },
-        {
-          title: 'Научиться учиться',
-          description: 'Проектная работа для закрепления навыков по HTML и CSS',
-          badges: ['HTML', 'CSS'],
-          image: HowTo,
-          codeLink: 'https://github.com/Mikzin/how-to-learn',
-          demoLink: 'https://mikzin.github.io/how-to-learn',
-        },
-        {
-          title: 'Organic',
-          description: 'Сайт для заказа здоровых продуктов питания',
-          badges: ['HTML', 'SCSS'],
-          image: Organic,
-          codeLink: 'https://github.com/Mikzin/organick',
-          demoLink: 'https://mikzin.github.io/organick',
-        },
-        {
-          title: 'RememberMe',
-          description: 'Сайт для сохранения учебных ресурсов',
-          badges: ['HTML', 'CSS', 'JavaScipt', 'Vue'],
-          image: RememberMe,
-          codeLink: 'https://github.com/Mikzin/learningresources',
-          demoLink: 'https://mikzin.github.io/learningresources',
-        },
-        {
-          title: 'Vueshop',
-          description: 'Сайт интернет-магазин для практики концепций Vue.js',
-          badges: ['HTML', 'CSS', 'JavaScipt', 'Vue'],
-          image: Vueshop,
-          codeLink: 'https://github.com/Mikzin/vueshop',
-          demoLink: 'https://mikzin.github.io/vueshop',
-        },
-      ],
-    };
   },
 };
 </script>

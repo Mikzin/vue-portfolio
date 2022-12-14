@@ -17,8 +17,6 @@ export default {
         'SCSS',
         'JavaScript',
         'Vue.js',
-        // 'Vuex',
-        // 'Vue Router',
         'Bootstrap',
         'npm',
         'Webpack',

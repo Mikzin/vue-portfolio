@@ -29,7 +29,6 @@ export default {
 
 <style scoped>
 .card {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   max-width: 399px;
@@ -63,7 +62,7 @@ a {
 }
 
 .card__description {
-  margin: 16px 0;
+  margin: 16px 0 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
