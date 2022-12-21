@@ -35,9 +35,19 @@ export default {
   line-height: 32px;
   letter-spacing: -0.02em;
   margin: 0 0 18px;
+  padding: 24px;
 }
 
 .stack__skills {
   display: flex;
+}
+@media screen and (max-width: 700px) {
+  .stack__skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .stack__title {
+    margin: 0;
+  }
 }
 </style>

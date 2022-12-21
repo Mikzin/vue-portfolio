@@ -10,5 +10,6 @@
   border: 1px solid #dd9c3c;
   border-radius: 4px;
   margin: 2px;
+  justify-self: center;
 }
 </style>

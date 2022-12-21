@@ -180,4 +180,16 @@ export default defineComponent({
 .carousel__icon {
   fill: #bf7506;
 }
+
+.carousel__pagination {
+  padding-left: 0;
+}
+
+.carousel__next {
+  right: -20px;
+}
+
+.carousel__prev {
+  left: -20px;
+}
 </style>

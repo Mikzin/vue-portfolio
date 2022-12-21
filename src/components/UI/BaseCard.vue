@@ -74,4 +74,11 @@ a {
   background-size: cover;
   background-position: center;
 }
+
+@media screen and (max-width: 700px) {
+  .card {
+    max-width: 375px;
+    padding: 12px;
+  }
+}
 </style>

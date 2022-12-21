@@ -53,6 +53,7 @@
 <style scoped>
 .welcome {
   max-width: 510px;
+  padding: 24px;
 }
 
 .welcome__title {
@@ -100,5 +101,12 @@
   font-size: 16px;
   line-height: 24px;
   color: #211b12;
+}
+
+@media screen and (max-width: 700px) {
+  .welcome__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 </style>

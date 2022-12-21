@@ -79,12 +79,24 @@ body {
   line-height: 60px;
   letter-spacing: -0.03em;
   color: #bf7506;
-  margin: 100px 0 0;
+  margin: 100px 20px 0;
 }
 
 .card__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 72px;
+}
+
+@media screen and (max-width: 700px) {
+  .hand-main {
+    display: none;
+  }
+
+  .projects__title {
+    margin: 30px 20px 0;
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 </style>

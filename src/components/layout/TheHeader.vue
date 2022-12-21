@@ -11,9 +11,6 @@
         <li class="header__item">
           <a class="header__link" href="#about">Обо мне</a>
         </li>
-        <li class="header__item">
-          <a class="header__link" href="">Контакты</a>
-        </li>
       </ul>
     </nav>
   </header>
@@ -45,5 +42,16 @@
 
 .header__link:hover {
   font-weight: 700;
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .header__list {
+    padding: 0;
+  }
 }
 </style>
