@@ -37,7 +37,13 @@
         </ul>
         <base-button class="button-cv">
           <img src="../../images/cv.svg" />
-          <a :href="cv" class="cv-link" download> Скачать резюме</a>
+          <a
+            href="https://drive.google.com/uc?id=1VSm7NT3b-YYoHpgnrdvrLJavIqUQwomg&export=download"
+            class="cv-link"
+            download
+          >
+            Скачать резюме</a
+          >
         </base-button>
       </div>
     </div>

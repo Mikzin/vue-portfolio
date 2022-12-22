@@ -40,7 +40,9 @@ export default {
 
 .stack__skills {
   display: flex;
+  justify-content: center;
 }
+
 @media screen and (max-width: 700px) {
   .stack__skills {
     display: grid;
