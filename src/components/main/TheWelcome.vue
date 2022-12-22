@@ -35,20 +35,24 @@
             </a>
           </li>
         </ul>
-        <base-button>
+        <base-button class="button-cv">
           <img src="../../images/cv.svg" />
-          <a
-            href="../../images/CV.pdf"
-            class="cv-link"
-            download="CV-Zinchuk.pdf"
-          >
-            Скачать резюме</a
-          >
+          <a :href="cv" class="cv-link" download> Скачать резюме</a>
         </base-button>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      cv: 'cv-zinchuk.pdf',
+    };
+  },
+};
+</script>
 
 <style scoped>
 .welcome {
