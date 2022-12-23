@@ -13,4 +13,10 @@
   text-align: center;
   margin: 0;
 }
+
+@media screen and (max-width: 700px) {
+  .footer__text {
+    margin: 24px;
+  }
+}
 </style>
