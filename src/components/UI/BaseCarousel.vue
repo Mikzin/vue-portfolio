@@ -46,6 +46,7 @@ import Vueshop from '../../images/Vueshop.png';
 import Findcoach from '../../images/findcoach.png';
 import Currency from '../../images/currency.png';
 import Alef from '../../images/alef.png';
+import Drag from '../../images/drag.png';
 
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
@@ -72,7 +73,7 @@ export default defineComponent({
           title: 'Mesto',
           description:
             'Проект Mesto. Можно выкладывать фото c подписью, ставить лайки, удалять и просматривать фото, редактировать профиль и аватар.',
-          badges: ['HTML', 'CSS', 'JavaScript'],
+          badges: ['HTML', 'CSS', 'JavaScript', 'REST Api'],
           image: Mesto,
           codeLink: 'https://github.com/Mikzin/mesto',
           demoLink: 'https://mikzin.github.io/mesto/',
@@ -85,6 +86,15 @@ export default defineComponent({
           image: Todo,
           codeLink: 'https://github.com/Mikzin/todo',
           demoLink: 'https://mikzin.github.io/todo',
+        },
+        {
+          title: 'Drag&Drop',
+          description:
+            'Инвентарь, где можно перемещать и удалять айтемы по сетке',
+          badges: ['HTML', 'CSS', 'JavaScipt', 'Vue', 'REST Api'],
+          image: Drag,
+          codeLink: 'https://github.com/Mikzin/drag-drop',
+          demoLink: 'https://mikzin.github.io/drag-drop/',
         },
         {
           title: 'Shop page',
