@@ -73,7 +73,7 @@ export default defineComponent({
           title: 'Mesto',
           description:
             'Проект Mesto. Можно выкладывать фото c подписью, ставить лайки, удалять и просматривать фото, редактировать профиль и аватар.',
-          badges: ['HTML', 'CSS', 'JavaScript', 'REST Api'],
+          badges: ['HTML', 'CSS', 'JavaScript', 'REST'],
           image: Mesto,
           codeLink: 'https://github.com/Mikzin/mesto',
           demoLink: 'https://mikzin.github.io/mesto/',
@@ -91,7 +91,7 @@ export default defineComponent({
           title: 'Drag&Drop',
           description:
             'Инвентарь, где можно перемещать и удалять айтемы по сетке',
-          badges: ['HTML', 'CSS', 'JavaScipt', 'Vue', 'REST Api'],
+          badges: ['HTML', 'CSS', 'JavaScipt', 'Vue', 'REST'],
           image: Drag,
           codeLink: 'https://github.com/Mikzin/drag-drop',
           demoLink: 'https://mikzin.github.io/drag-drop/',
@@ -109,7 +109,7 @@ export default defineComponent({
           title: 'Курсы валют',
           description:
             'Сайт, где можно посмотреть курсы валют и посчитать необходимые суммы',
-          badges: ['HTML', 'CSS', 'JavaScipt', 'Vue', 'REST Api'],
+          badges: ['HTML', 'CSS', 'JavaScipt', 'Vue', 'REST'],
           image: Currency,
           codeLink: 'https://github.com/Mikzin/currency-exchange',
           demoLink: 'https://mikzin.github.io/currency-exchange',

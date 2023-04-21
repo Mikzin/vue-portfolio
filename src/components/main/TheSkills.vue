@@ -20,7 +20,7 @@ export default {
         'Bootstrap',
         'npm',
         'Webpack',
-        'REST Api',
+        'REST',
         'git',
       ],
     };

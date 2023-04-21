@@ -11,11 +11,11 @@
     <div class="card__buttons">
       <base-button class="card__button">
         <img src="../../images/code.svg" class="button-image" />
-        <a :href="codeLink" target="blank">Код</a>
+        <a class="button-title" :href="codeLink" target="blank">Код</a>
       </base-button>
       <base-button class="card__button">
         <img src="../../images/demo.svg" class="button-image" />
-        <a :href="demoLink" target="blank">Демо</a>
+        <a class="button-title" :href="demoLink" target="blank">Демо</a>
       </base-button>
     </div>
   </div>
@@ -79,6 +79,17 @@ a {
   .card {
     max-width: 375px;
     padding: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    max-width: 320px;
+    padding: 12px;
+  }
+
+  .button-title {
+    font-size: 12px;
   }
 }
 </style>

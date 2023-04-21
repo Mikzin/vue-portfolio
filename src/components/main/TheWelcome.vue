@@ -118,5 +118,9 @@ export default {
     font-size: 30px;
     line-height: 36px;
   }
+
+  .cv-link {
+    font-size: 12px;
+  }
 }
 </style>

@@ -12,4 +12,10 @@
   margin: 2px;
   justify-self: center;
 }
+
+@media screen and (max-width: 400px) {
+  .badge {
+    font-size: 12px;
+  }
+}
 </style>
