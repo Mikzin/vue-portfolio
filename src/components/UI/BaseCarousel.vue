@@ -47,6 +47,8 @@ import Findcoach from '../../images/findcoach.png';
 import Currency from '../../images/currency.png';
 import Alef from '../../images/alef.png';
 import Drag from '../../images/drag.png';
+import Chewie from '../../images/chewie.png';
+import Kcal from '../../images/kcal.png';
 
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
@@ -95,6 +97,22 @@ export default defineComponent({
           image: Drag,
           codeLink: 'https://github.com/Mikzin/drag-drop',
           demoLink: 'https://mikzin.github.io/drag-drop/',
+        },
+        {
+          title: 'Chewie',
+          description: 'SPA для блога моей собаки',
+          badges: ['HTML', 'CSS', 'JavaScipt', 'Vue'],
+          image: Chewie,
+          codeLink: 'https://github.com/Mikzin/chewie',
+          demoLink: 'https://mikzin.github.io/chewie',
+        },
+        {
+          title: 'Трекер калорий',
+          description: 'Простое приложение для треккинга калорий',
+          badges: ['HTML', 'CSS', 'JavaScipt', 'Vue'],
+          image: Kcal,
+          codeLink: 'https://github.com/Mikzin/kcal-tracker',
+          demoLink: 'https://mikzin.github.io/kcal-tracker',
         },
         {
           title: 'Shop page',
