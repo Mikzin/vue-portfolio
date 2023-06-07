@@ -51,7 +51,6 @@ export default {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   color: #211b12;
-  max-width: 1280px;
   margin: 0 auto;
 }
 

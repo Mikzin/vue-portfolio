@@ -50,16 +50,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      cv: 'cv-zinchuk.pdf',
-    };
-  },
-};
-</script>
-
 <style scoped>
 .welcome {
   max-width: 510px;

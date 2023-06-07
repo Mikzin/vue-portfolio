@@ -70,7 +70,6 @@ a {
 
 .card__image {
   max-width: 399px;
-  height: 299px;
   background-size: cover;
   background-position: center;
 }

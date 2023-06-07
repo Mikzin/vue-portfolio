@@ -9,21 +9,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      badges: [
-        'HTML',
-        'CSS',
-        'SCSS',
-        'JavaScript',
-        'Vue.js',
-        'Bootstrap',
-        'npm',
-        'Webpack',
-        'REST',
-        'git',
-      ],
-    };
+  computed: {
+    badges() {
+      return this.$store.state.badges;
+    },
   },
 };
 </script>
